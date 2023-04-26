@@ -15,15 +15,16 @@ public class ReverseWord {
             return original;
         }
 
-        StringBuilder sb = new StringBuilder();
+        StringBuilder result = new StringBuilder();
 
         String[] arr = original.split(" ");
 
         for(String s : arr) {
-            sb.append(s).reverse().append(" ");
+            result.append(new StringBuilder(s).reverse().toString());
+            result.append(" ");
         }
 
-        return sb.toString().trim();
+        return result.toString().trim();
     }
 
     @Test
